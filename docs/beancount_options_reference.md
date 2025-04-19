@@ -269,6 +269,24 @@
         A boolean, true if the number formatting routines should output
 
         commas as thousand separators in numbers.
+        
+    option "insert_pythonpath" "False"
+    
+        Search for plugins in the directory of the beancount file. When
+        
+        this is set to True, the path of the file in which it is encountered
+        
+        is prepended to PYTHONPATH. The module name is the same as it would
+        
+        be specified for a Python "import" statement. For example, a plugin 
+
+        imported with 'plugin "test"' would be searched for in ./test.py and
+
+        ./test/__init__.py, and a plugin imported with 'plugin plugins.test' 
+
+        would be searched for in ./plugins/test.py and 
+        
+        ./plugins/test/__init__.py
 
     option "plugin_processing_mode" "raw"
 
